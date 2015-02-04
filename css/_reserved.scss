@@ -1,0 +1,74 @@
+.centralize {
+    margin: auto;
+    max-width: $page_max;
+    min-width: $page_min;
+}
+
+a {
+    color: $clr_link;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.link-emulation {
+    color: $clr_link;
+}
+
+.highlight_gray {
+    color: $clr_gray;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.clickalbe {
+    cursor: pointer !important;
+}
+
+.relative {
+    position: relative !important;
+}
+
+.align-right {
+    text-align: right !important;
+}
+
+.align-center {
+    text-align: center !important;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.visible {
+    visibility: visible !important;
+}
+
+.ovhidden {
+    overflow: hidden !important;
+}
+
+.clear {
+    clear: both !important;
+}
+
+.clearfix {
+    @include clearfix;
+}

@@ -1,0 +1,64 @@
+@mixin transition($name, $time: 0.4s, $effect: ease-out, $delay: 0s) {
+    -webkit-transition: $name $time $effect $delay;
+    -moz-transition: $name $time $effect $delay;
+    -o-transition: $name $time $effect $delay;
+    -ms-transition: $name $time $effect $delay;
+    transition: $name $time $effect $delay;
+}
+
+@mixin bg($left: 0, $top: 0, $file: "sprite.png", $repeat: no-repeat) {
+    background: url("../img/#{$file}") $repeat scroll $left $top transparent;
+}
+
+@mixin clear() {
+    overflow: hidden;
+    width: 100%;
+}
+
+@mixin clearfix() {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin user-select($param: none) {
+    -webkit-user-select: $param;
+    -moz-user-select: $param;
+    -ms-user-select: $param;
+    user-select: $param;
+}
+
+@mixin inblock() {
+    display: inline-block;
+    vertical-align: top;
+    *display: inline;
+    *zoom: 1;
+}
+
+@mixin box-sizing() {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin f($size: 18, $lh: 20, $def: 10) {
+    font-size: $size/$def + em;
+    line-height: $lh/$size + em;
+}
+
+@mixin icon($width, $height, $bgLeft: 0, $bgTop: 0, $posLeft: 0, $posTop: 0, $file: "sprite.png") {
+    @include bg($bgLeft, $bgTop, $file);
+    position: absolute;
+    width: $width;
+    height: $height;
+    top: $posTop;
+    left: $posLeft;
+    @content;
+}

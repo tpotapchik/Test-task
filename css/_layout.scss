@@ -1,0 +1,245 @@
+html {
+    overflow-y: scroll;
+}
+
+html,
+body,
+.page {
+    height: 100%;
+}
+
+body {
+    background: url("../img/body-bg.jpg") no-repeat #e8e8e8;
+    background-position: 50%, 88px;
+    background-size: cover;
+    font: 300 62.5%/1.19 'Roboto', Arial, Helvetica, sans-serif;
+    color: $clr_def;
+    min-width: $page_min;
+
+    > .page {
+        height: auto;
+        min-height: 100%;
+    }
+}
+
+.page_i {
+    padding-bottom: $height_footer;
+}
+
+.footer {
+    height: $height_footer;
+    margin-top: -$height_footer;
+}
+
+.row {
+    @include clearfix;
+    margin-left: -$grid_gutter_width / 2;
+    margin-right: -$grid_gutter_width / 2;
+}
+
+.col-3,
+.col-4,
+.col-6,
+.col-8,
+.col-9 {
+    @include box-sizing;
+    float: left;
+    padding-left: $grid_gutter_width / 2;
+    padding-right: $grid_gutter_width / 2;
+    min-height: 1px;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33333333%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-8 {
+    width: 66.66666667%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.show-more-btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 109px;
+    cursor: pointer;
+    @include inblock;
+    height: 48px;
+    background-color: $bg_pink;
+    font-size: 2.4em;
+    line-height: 44px;
+    margin-top: 12px;
+    z-index: 1;
+    position: relative;
+
+    &:hover {
+        background-color: $bg_pink_hover;
+    }
+
+}
+
+.show-more-btn-wrapper {
+    position: relative;
+
+    &:after,
+    &:before {
+        width: 29px;
+        height: 29px;
+        background-color: #b466b5;
+        position: absolute;
+        content: "";
+    }
+
+    &:before {
+        left: 61px;
+        bottom: -11px;
+    }
+
+    &:after {
+        right: 63px;
+        top: 1px;
+    }
+}
+
+.user-content {
+    @include f;
+
+    > *:first-child {
+        margin-top: 0;
+    }
+    p {
+        margin: 1em 0;
+    }
+}
+
+.component-checkbox {
+    cursor: default;
+    position: relative;
+    padding-right: 48px;
+    min-height: 50px;
+    font-size: 1.8em;
+    line-height: 50px;
+    font-weight: 700;
+    font-family: $ptr;
+
+    input {
+        left: 0;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+
+        + label:before {
+            @include bg(0, 0, "checkbox.png");
+            content: "";
+            height: 50px;
+            right: -7px;
+            position: absolute;
+            top: -9px;
+            width: 48px;
+        }
+        &:checked + label:before {
+            background-position: 0 -52px;
+        }
+        &:hover + label:before {
+            //            background-position: -18px 0;
+        }
+        &:checked:hover + label:before {
+        }
+        &:active + label:before {
+        }
+        &:checked:active + label:before {
+        }
+        &:disabled + label:before {
+        }
+        &:checked:disabled + label:before {
+        }
+    }
+    label {
+        cursor: default;
+        display: block;
+        line-height: 44px;
+    }
+}
+
+.component-select {
+    font-size: 18px;
+    color: $clr_title;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+//    margin: 0 10px;
+
+    .chosen-single {
+        height: 31px;
+        line-height: 31px;
+        border: 2px solid $bg_green;
+        color: $clr_title;
+        padding-left: 7px;
+        @include bg(0, 0, "filter-bg.png", repeat);
+        width: 227px;
+
+        span {
+            margin-right: 29px;
+        }
+        div {
+            width: 29px;
+            height: 100%;
+
+            b {
+                @include bg(-99px, -56px);
+                width: 21px;
+                height: 10px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -5px 0 0 -12px;
+
+            }
+        }
+        &:hover {
+
+        }
+    }
+    .chosen-drop {
+        border: 1px solid $clr_gray_form;
+        border-top: 0;
+        background-color: #fff;
+        margin-top: -1px;
+        width: 238px;
+    }
+    .chosen-results {
+        li {
+            padding: 7px 15px 8px;
+        }
+        .highlighted {
+            background: $clr_gray_form;
+            color: #000;
+        }
+    }
+    //&.chosen-with-drop {
+    //    .chosen-single {
+    //        background-color: #55337e;
+    //        color: #8e7ca6;
+    //
+    //        div {
+    //            background-position: 0 0;
+    //        }
+    //    }
+    //}
+}
+
+
+
+
+
+
