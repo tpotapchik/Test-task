@@ -8,11 +8,10 @@ body,
     height: 100%;
 }
 
+
 body {
-    background: url("../img/body-bg.jpg") no-repeat #e8e8e8;
-    background-position: 50%, 88px;
-    background-size: cover;
-    font: 300 62.5%/1.19 'Roboto', Arial, Helvetica, sans-serif;
+
+    font: 300 62.5%/1.19 Arial, Helvetica, sans-serif;
     color: $clr_def;
     min-width: $page_min;
 

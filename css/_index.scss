@@ -1,4 +1,177 @@
+.logo {
+    float: left;
+    width: 269px;
+    height: 70px;
+    @include bg(0, 0, "logo.png");
+    margin-top: 28px;
+    margin-left: 15px;
+}
+
+.logo-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.header {
+    height: 118px;
+    @include bg(0, 0, "header-bg.png", repeat-x);
+    color: $clr_white;
+    font-size: 1.4em;
+}
 
 
+.header-content {
+    margin-left: 280px;
+    margin-right: 160px;
+    text-align: center;
+}
 
+.social {
+
+
+    a {
+        @include inblock;
+        width: 31px;
+        height: 31px;
+        @include bg();
+        margin: 0 5px 2px 4px;
+
+        &.fb {
+            background-position: 0 0;
+        }
+        &.tw {
+            background-position: -33px 0;
+        }
+        &.ut {
+            background-position: -66px 0;
+        }
+        &.del {
+            background-position: -99px 0;
+        }
+
+    }
+
+}
+
+.nav {
+    margin: 20px 0 15px;
+
+
+    a {
+        color: $clr_white;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-left: 1px solid $clr_white;
+        padding: 0 15px;
+
+        &:first-child {
+            border-left: 0 none;
+        }
+
+        &:hover,
+        &.active {
+            text-decoration: underline;
+        }
+            }
+}
+
+.address {
+}
+
+.contact-us {
+    float: right;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.btn-phone {
+    color: $clr_link;
+    width: 134px;
+    height: 43px;
+    text-align: center;
+    line-height: 42px;
+    @include bg(0, 0, "btn-phone-bg.png");
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    @include  inblock;
+}
+
+.phone {
+    margin-top: 10px;
+}
+
+.gallery-block {
+    height: 252px;
+    @include bg(0,0,"gallery-bg.jpg");
+    background-size: cover; /*&&&&&&&&&&&&&*/
+}
+.video-block {
+    float: left;
+}
+.gallery {
+    margin-left: 427px;
+}
+
+
+.slick-dots {
+    text-align: right;
+    margin-top: -20px;
+
+     li {
+        margin: 0 5px;
+
+         button:hover,
+         button:focus {
+             border: 2px solid #000;
+             background-color: #000;
+         }
+    }
+
+}
+
+.main-menu-wrapper {
+    background-color: #00478b;
+    padding: 12px 0;
+
+    ._ico {
+        @include icon(51px,49px,0,0,27px,22px);
+
+        &.ico-1 {
+            background-position:  0 -33px;
+        }
+        &.ico-2 {
+            background-position:  -53px -33px;
+        }
+        &.ico-3 {
+            background-position:  0 -83px;
+        }
+        &.ico-4 {
+            background-position:  -53px -83px;
+        }
+
+    }
+}
+.main-menu-item {
+    position: relative;
+    @include inblock;
+    @include bg(0,0,"main-menu-bg.png");
+    width: 150px;
+    height: 70px;
+    padding-left: 100px;
+    padding-top: 27px;
+    margin-left: 5px;
+    font-size: 1.9em;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:first-child {
+        margin-left: 0;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+
+}
 
