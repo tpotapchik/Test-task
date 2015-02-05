@@ -1233,6 +1233,22 @@ body {
       border: 2px solid #000;
       background-color: #000; }
 
+.main-content-wrapper {
+  background: -moz-linear-gradient(270deg, #acacac 0%, #f4f4f4 100%);
+  /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #acacac), color-stop(100%, #f4f4f4));
+  /* safari4+,chrome */
+  background: -webkit-linear-gradient(270deg, #acacac 0%, #f4f4f4 100%);
+  /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(270deg, #acacac 0%, #f4f4f4 100%);
+  /* opera 11.10+ */
+  background: -ms-linear-gradient(270deg, #acacac 0%, #f4f4f4 100%);
+  /* ie10+ */
+  background: linear-gradient(180deg, #acacac 0%, #f4f4f4 100%);
+  /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#acacac', endColorstr='#f4f4f4',GradientType=0 );
+  /* ie6-9 */ }
+
 .main-menu-wrapper {
   background-color: #00478b;
   padding: 12px 0; }
