@@ -305,7 +305,9 @@
 }
 
 .h1_title,
-.h2_title {
+.h2_title,
+.h3_title,
+.h4_title {
     margin-top: 0;
     text-transform: uppercase;
     color: $clr_link;
@@ -313,11 +315,16 @@
 
 .h1_title {
     font-size: 2.5em;
-
 }
 
 .h2_title {
     font-size: 2em;
+}
+.h3_title {
+    font-size: 1.8em;
+}
+.h4_title {
+    font-size: 1.6em;
 }
 
 .footer-top {
@@ -384,4 +391,52 @@
 .copyright {
     float: left;
     margin:15px 0;
+}
+.small-gallery {
+    border-bottom: 1px solid #888888;
+}
+
+.small-gallery-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: $clr_link;
+}
+.item-pic {
+    float: left;
+}
+.item-descr {
+    margin-left: 95px;
+
+
+
+}
+.small-gallery-item {
+    @include inblock;
+    text-decoration: none;
+    max-width: 170px;/*****************/
+
+
+//    margin-left: 40px;
+//
+//    &:first-child {
+//        margin-left: 0;
+//    }
+
+
+
+    ._title {
+        font-size: 1.4em;
+        font-weight: 700;
+
+    }
+
+    ._show-more {
+        font-size: 1.2em;
+        color:#000;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
