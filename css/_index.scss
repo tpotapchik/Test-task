@@ -1,10 +1,10 @@
 .logo {
-    float: left;
     width: 269px;
     height: 70px;
     @include bg(0, 0, "logo.png");
     margin-top: 28px;
     margin-left: 15px;
+    background-size: cover;
 }
 
 .logo-link {
@@ -27,9 +27,32 @@
 }
 
 .header-content {
-    margin-left: 280px;
-    margin-right: 160px;
+    padding: 0 160px 0 280px;
     text-align: center;
+}
+.header-side-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mobile-menu {
+    width: 134px;
+    height: 43px;
+    line-height: 42px;
+    position: relative;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    color:$clr_link;
+    @include bg(0,0,"btn-phone-bg.png");
+    padding-left: 20px;
+    float: left;
+    margin-left: 10px;
+    display: none;
+
+    ._ico {
+        @include icon(31px,15px, -106px, -83px,80px,15px);
+    }
 }
 
 .social {
@@ -83,9 +106,12 @@
 }
 
 .contact-us {
-    float: right;
     margin-right: 15px;
     text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 53px;
 }
 
 .btn-phone {
@@ -98,7 +124,9 @@
     font-size: 17px;
     font-weight: 700;
     cursor: pointer;
-    @include inblock;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .phone {
@@ -272,8 +300,8 @@
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    width: 230px;
-    height: 63px;
+    width: 205px;
+    height: 41px;
     padding: 22px 0 0 25px;
     text-align: center;
     display: block;
@@ -392,47 +420,30 @@
     float: left;
     margin:15px 0;
 }
+
 .small-gallery {
     border-bottom: 1px solid #888888;
+    width: 100%;
+    table-layout: fixed;
+    display: table;
 }
-
-.small-gallery-title {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: $clr_link;
-}
-.item-pic {
-    float: left;
-}
-.item-descr {
-    margin-left: 95px;
-
-
-
+.small-gallery-row {
+    display: table-row;
 }
 .small-gallery-item {
-    @include inblock;
     text-decoration: none;
-    max-width: 170px;/*****************/
-
-
-//    margin-left: 40px;
-//
-//    &:first-child {
-//        margin-left: 0;
-//    }
-
-
+    display: table-cell;
+    vertical-align: middle;
+    word-wrap: break-word;
+    padding: 0 0 25px 0;
 
     ._title {
         font-size: 1.4em;
         font-weight: 700;
-
     }
-
     ._show-more {
         font-size: 1.2em;
-        color:#000;
+        color: #000;
         text-decoration: underline;
 
         &:hover {
@@ -440,3 +451,23 @@
         }
     }
 }
+.small-gallery-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: $clr_link;
+    margin: 20px 0 20px;
+}
+
+.item-pic {
+    @include inblock;
+    vertical-align: middle;
+    max-width: 95px;
+    margin-right: 10px;
+}
+
+.item-descr {
+    @include inblock;
+    vertical-align: middle;
+    max-width: 70px;
+}
+

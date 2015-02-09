@@ -58,3 +58,33 @@
         page-break-after: avoid;
     }
 }
+
+@media screen and (max-width: 1024px) {
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .logo {
+        width: 230px;
+        height: 60px;
+        margin-top: 53px;
+    }
+    .address {
+        margin-top: 40px;
+    }
+    .phone {
+        margin-top: 23px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+
+}

@@ -206,8 +206,7 @@ textarea {
 
 .centralize {
   margin: auto;
-  max-width: 1024px;
-  min-width: 1024px; }
+  max-width: 1024px; }
 
 a {
   color: #003082; }
@@ -960,8 +959,7 @@ body,
 
 body {
   font: 300 62.5%/1.19 Arial, Helvetica, sans-serif;
-  color: #000;
-  min-width: 1024px; }
+  color: #000; }
   body > .page {
     height: auto;
     min-height: 100%; }
@@ -1121,12 +1119,12 @@ body {
     color: #000; }
 
 .logo {
-  float: left;
   width: 269px;
   height: 70px;
   background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
   margin-top: 28px;
-  margin-left: 15px; }
+  margin-left: 15px;
+  background-size: cover; }
 
 .logo-link {
   width: 100%;
@@ -1153,9 +1151,35 @@ body {
   /* ie6-9 */ }
 
 .header-content {
-  margin-left: 280px;
-  margin-right: 160px;
+  padding: 0 160px 0 280px;
   text-align: center; }
+
+.header-side-left {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.mobile-menu {
+  width: 134px;
+  height: 43px;
+  line-height: 42px;
+  position: relative;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #003082;
+  background: url("../img/btn-phone-bg.png") no-repeat scroll 0 0 transparent;
+  padding-left: 20px;
+  float: left;
+  margin-left: 10px;
+  display: none; }
+  .mobile-menu ._ico {
+    background: url("../img/sprite.png") no-repeat scroll -106px -83px transparent;
+    position: absolute;
+    width: 31px;
+    height: 15px;
+    top: 15px;
+    left: 80px; }
 
 .social a {
   display: inline-block;
@@ -1189,9 +1213,12 @@ body {
       text-decoration: underline; }
 
 .contact-us {
-  float: right;
   margin-right: 15px;
-  text-align: right; }
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 53px; }
 
 .btn-phone {
   color: #003082;
@@ -1203,10 +1230,9 @@ body {
   font-size: 17px;
   font-weight: 700;
   cursor: pointer;
-  display: inline-block;
-  vertical-align: top;
-  *display: inline;
-  *zoom: 1; }
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 .phone {
   margin-top: 10px; }
@@ -1351,8 +1377,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  width: 230px;
-  height: 63px;
+  width: 205px;
+  height: 41px;
   padding: 22px 0 0 25px;
   text-align: center;
   display: block;
@@ -1466,27 +1492,20 @@ body {
   margin: 15px 0; }
 
 .small-gallery {
-  border-bottom: 1px solid #888888; }
+  border-bottom: 1px solid #888888;
+  width: 100%;
+  table-layout: fixed;
+  display: table; }
 
-.small-gallery-title {
-  font-size: 1.8em;
-  font-weight: 700;
-  color: #003082; }
-
-.item-pic {
-  float: left; }
-
-.item-descr {
-  margin-left: 95px; }
+.small-gallery-row {
+  display: table-row; }
 
 .small-gallery-item {
-  display: inline-block;
-  vertical-align: top;
-  *display: inline;
-  *zoom: 1;
   text-decoration: none;
-  max-width: 170px;
-  /*****************/ }
+  display: table-cell;
+  vertical-align: middle;
+  word-wrap: break-word;
+  padding: 0 0 25px 0; }
   .small-gallery-item ._title {
     font-size: 1.4em;
     font-weight: 700; }
@@ -1496,6 +1515,35 @@ body {
     text-decoration: underline; }
     .small-gallery-item ._show-more:hover {
       text-decoration: none; }
+
+.small-gallery-title {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #003082;
+  margin: 20px 0 20px; }
+
+.item-pic {
+  display: inline-block;
+  vertical-align: top;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  max-width: 95px;
+  margin-right: 10px; }
+
+.item-descr {
+  display: inline-block;
+  vertical-align: top;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  max-width: 70px; }
+
+.content-picture {
+  margin: 5px 0 5px 10px; }
+
+.ico-list {
+  list-style: none; }
 
 @media print {
   * {
@@ -1544,5 +1592,22 @@ body {
   h2,
   h3 {
     page-break-after: avoid; } }
+@media screen and (max-width: 768px) {
+  .mobile-menu {
+    display: block; }
+
+  .nav {
+    display: none; }
+
+  .logo {
+    width: 230px;
+    height: 60px;
+    margin-top: 53px; }
+
+  .address {
+    margin-top: 40px; }
+
+  .phone {
+    margin-top: 23px; } }
 
 /*# sourceMappingURL=main.css.map */
