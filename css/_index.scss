@@ -258,6 +258,10 @@
 .aside-right {
     float: right;
 
+    &.subpage {
+        margin-top: 30px;
+    }
+
 }
 
 .aside-right-item {
@@ -292,6 +296,10 @@
     p {
         font-size: 1.4em;
 
+    }
+
+    &.listpage {
+        margin-right: 10px;
     }
 }
 
@@ -343,6 +351,10 @@
 
 .h1_title {
     font-size: 2.5em;
+
+    &.subpage {
+        margin-top: 25px;
+    }
 }
 
 .h2_title {

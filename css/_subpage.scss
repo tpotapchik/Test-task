@@ -1,16 +1,92 @@
-.content-picture {
-    margin: 5px 0 5px 10px;
+.main-pic-subpage {
+    margin-bottom: 14px;
 }
 
+.content-picture {
+    margin: 5px 0 5px 10px;
+
+}
 
 .number-list {
+    font-size: 1.4em;
+    padding-left: 20px;
 
 }
 
 .ico-list {
-list-style: none;
+    font-size: 1.4em;
+    list-style: none;
+    padding-left: 20px;
     li {
+        position: relative;
 
+        &:before {
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 8px;
+            @include bg(-132px, 0);
+            left: -12px;
+            top: 4px;
+        }
     }
 
+}
+
+.feedback-form {
+    font-size: 1.4em;
+    line-height: 30px;
+    margin: 15px 0;
+
+    sup {
+        color: #fd2822;
+
+    }
+    .row {
+        margin-bottom: 10px;
+    }
+}
+
+.input-field {
+    width: 100%;
+    height: 28px;
+    border: 1px solid #a8a8a7;
+    box-shadow: inset 0 0 5px 0 #a8a8a7;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.textarea-field {
+    height: 100px;
+}
+
+.btn-submit {
+    color: $clr_white;
+    background: #0069cd; /* Old browsers */
+    background: -moz-linear-gradient(top, #0069cd 0%, #00488c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0069cd), color-stop(100%, #00488c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #0069cd 0%, #00488c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #0069cd 0%, #00488c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #0069cd 0%, #00488c 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #0069cd 0%, #00488c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0069cd', endColorstr='#00488c', GradientType=0); /* IE6-9 */
+    border-radius: 2px;
+    padding: 0 16px;
+    line-height: 30px;
+    border: 0 none;
+
+}
+.schedule {
+    font-size: 1.4em;
+
+}
+.contact-directors {
+    color: $clr_link;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
